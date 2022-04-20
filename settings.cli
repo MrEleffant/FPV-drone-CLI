@@ -1,7 +1,21 @@
+
+# 
+# Building AutoComplete Cache ... Done!
+# 
+# diff all
+
 # version
 # Betaflight / CRAZYBEEF4FR (C4FR) 4.3.0 Feb 12 2022 / 09:44:54 (norevision) MSP API: 1.44
 
+# start the command batch
+batch start
+
+# reset configuration to default settings
+defaults nosave
+
 board_name CRAZYBEEF4FR
+mcu_id 0058001a3439511336383737
+signature 
 
 # name: Mobula6
 
@@ -65,8 +79,6 @@ set dshot_burst = OFF
 set dshot_bidir = ON
 set motor_pwm_protocol = DSHOT300
 set motor_poles = 12
-set vbat_min_cell_voltage = 290
-set vbat_warning_cell_voltage = 300
 set vbat_detect_cell_voltage = 30
 set ibata_scale = 1175
 set yaw_motors_reversed = ON
@@ -158,6 +170,9 @@ set d_min_pitch = 0
 
 profile 2
 
+# restore original profile selection
+profile 0
+
 rateprofile 0
 
 rateprofile 1
@@ -180,3 +195,9 @@ rateprofile 3
 rateprofile 4
 
 rateprofile 5
+
+# restore original rateprofile selection
+rateprofile 0
+
+# save configuration
+save

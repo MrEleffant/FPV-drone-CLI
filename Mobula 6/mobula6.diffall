@@ -1,0 +1,200 @@
+# diff all
+
+# version
+# Betaflight / CRAZYBEEF4FR (C4FR) 4.3.0 Feb 12 2022 / 09:44:54 (norevision) MSP API: 1.44
+
+# start the command batch
+batch start
+
+# reset configuration to default settings
+defaults nosave
+
+board_name CRAZYBEEF4FR
+mcu_id 0058001a3439511336383737
+signature 
+
+# name: Mobula6
+
+# resources
+resource RX_BIND 1 B02
+
+# feature
+feature -TELEMETRY
+feature -ANTI_GRAVITY
+
+# serial
+serial 1 2048 115200 57600 0 115200
+
+# beacon
+beacon RX_LOST
+beacon RX_SET
+
+# map
+map TAER1234
+
+# mode_color
+mode_color 5 0 9
+mode_color 5 1 11
+mode_color 5 2 2
+mode_color 5 3 13
+mode_color 5 4 10
+mode_color 5 5 3
+
+# aux
+aux 0 0 0 1800 2100 0 0
+aux 1 1 2 900 1200 0 0
+aux 2 2 2 1300 1700 0 0
+aux 3 13 3 1700 2100 0 0
+aux 4 36 1 1700 2100 0 0
+
+# adjrange
+adjrange 0 0 1 900 1200 12 1 0 0
+adjrange 1 0 1 1200 1800 12 1 0 0
+adjrange 2 0 1 1800 2100 12 1 0 0
+
+# vtxtable
+vtxtable bands 6
+vtxtable channels 8
+vtxtable band 1 BOSCAM_A A FACTORY 5865 5845 5825 5805 5785 5765 5745 5725
+vtxtable band 2 BOSCAM_B B FACTORY 5733 5752 5771 5790 5809 5828 5847 5866
+vtxtable band 3 BOSCAM_E E FACTORY 5705 5685 5665 5645 5885 5905 5925 5945
+vtxtable band 4 FATSHARK F FACTORY 5740 5760 5780 5800 5820 5840 5860 5880
+vtxtable band 5 RACEBAND R FACTORY 5658 5695 5732 5769 5806 5843 5880 5917
+vtxtable band 6 LOWRACE  L FACTORY 5333 5373 5413 5453 5493 5533 5573 5613
+vtxtable powerlevels 5
+vtxtable powervalues 10 2 14 20 26
+vtxtable powerlabels 0 RCE 25 100 400
+
+# master
+set yaw_spin_recovery = ON
+set acc_calibration = -304,-58,-200,1
+set airmode_start_throttle_percent = 32
+set rx_spi_protocol = FRSKY_D
+set dshot_idle_value = 1000
+set dshot_burst = OFF
+set dshot_bidir = ON
+set motor_pwm_protocol = DSHOT300
+set motor_poles = 12
+set vbat_detect_cell_voltage = 30
+set ibata_scale = 1175
+set yaw_motors_reversed = ON
+set small_angle = 180
+set gps_sbas_mode = AUTO
+set gps_rescue_throttle_min = 1200
+set deadband = 1
+set yaw_deadband = 1
+set pid_process_denom = 4
+set runaway_takeoff_deactivate_throttle_percent = 25
+set frsky_unit = IMPERIAL
+set osd_warn_batt_not_full = OFF
+set osd_warn_batt_warning = OFF
+set osd_warn_esc_fail = OFF
+set osd_warn_core_temp = OFF
+set osd_warn_rssi = ON
+set osd_rssi_pos = 2137
+set osd_tim_2_pos = 2423
+set osd_flymode_pos = 2113
+set osd_throttle_pos = 377
+set osd_vtx_channel_pos = 53
+set osd_crosshairs_pos = 2253
+set osd_current_pos = 288
+set osd_mah_drawn_pos = 2360
+set osd_craft_name_pos = 394
+set osd_warnings_pos = 14633
+set osd_avg_cell_voltage_pos = 2391
+set osd_disarmed_pos = 2314
+set osd_stat_tim_1 = ON
+set osd_stat_max_spd = OFF
+set osd_stat_battery = ON
+set osd_stat_bbox = OFF
+set osd_stat_bb_no = OFF
+set cpu_overclock = OFF
+set vtx_band = 5
+set vtx_channel = 6
+set vtx_power = 5
+set vtx_low_power_disarm = ON
+set vtx_freq = 5843
+set vcd_video_system = NTSC
+set frsky_spi_tx_id = 148,103,9
+set frsky_spi_offset = -14
+set frsky_spi_bind_hop_data = 3,106,211,81,186,56,161,31,136,6,111,219,86,191,61,166,36,141,11,116,221,91,196,66,171,41,146,16,121,226,96,201,71,176,46,151,21,126,231,101,206,76,181,51,156,26,131,0,0,0
+set name = Mobula6
+
+profile 0
+
+# profile 0
+set iterm_relax = RPY
+set p_pitch = 80
+set i_pitch = 100
+set d_pitch = 85
+set f_pitch = 140
+set p_roll = 85
+set i_roll = 100
+set d_roll = 85
+set f_roll = 140
+set p_yaw = 120
+set i_yaw = 100
+set f_yaw = 140
+set feedforward_transition = 21
+
+profile 1
+
+# profile 1
+set dterm_notch_cutoff = 160
+set anti_gravity_gain = 5000
+set acc_limit_yaw = 100
+set iterm_rotation = ON
+set iterm_relax = OFF
+set iterm_relax_type = GYRO
+set iterm_relax_cutoff = 11
+set iterm_windup = 40
+set iterm_limit = 150
+set yaw_lowpass_hz = 0
+set p_pitch = 50
+set i_pitch = 50
+set d_pitch = 27
+set f_pitch = 60
+set p_roll = 46
+set i_roll = 45
+set d_roll = 25
+set f_roll = 60
+set p_yaw = 65
+set i_yaw = 45
+set f_yaw = 60
+set d_min_roll = 0
+set d_min_pitch = 0
+
+profile 2
+
+# restore original profile selection
+profile 0
+
+rateprofile 0
+
+rateprofile 1
+
+rateprofile 2
+
+# rateprofile 2
+set rates_type = BETAFLIGHT
+set roll_rc_rate = 100
+set pitch_rc_rate = 100
+set yaw_rc_rate = 100
+set roll_srate = 70
+set pitch_srate = 70
+set yaw_srate = 70
+set tpa_rate = 10
+set tpa_breakpoint = 1650
+
+rateprofile 3
+
+rateprofile 4
+
+rateprofile 5
+
+# restore original rateprofile selection
+rateprofile 0
+
+# save configuration
+save
+# 

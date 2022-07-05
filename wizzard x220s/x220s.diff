@@ -1,4 +1,4 @@
-diff
+# diff
 
 # version
 # Betaflight / STM32F405 (S405) 4.2.5 Nov 22 2020 / 18:38:23 (afdac08b3) MSP API: 1.43
@@ -27,11 +27,11 @@ serial 5 2 115200 57600 0 115200
 
 # aux
 aux 0 0 0 1700 2100 0 0
-aux 1 1 1 900 1300 0 0
-aux 2 2 1 1300 1700 0 0
-aux 3 46 3 1550 2100 0 0
-aux 4 13 4 1700 2100 0 0
-aux 5 36 5 1700 2100 0 0
+aux 1 1 2 1700 2100 0 0
+aux 2 2 2 1300 1700 0 0
+aux 3 46 4 1250 2100 0 0
+aux 4 13 3 1700 2100 0 0
+aux 5 36 3 1700 2100 0 0
 
 # vtxtable
 vtxtable bands 5
@@ -46,7 +46,8 @@ vtxtable powervalues 0 1 2 3
 vtxtable powerlabels 25 200 600 1W
 
 # master
-set acc_calibration = 19,18,80,1
+set acc_trim_pitch = -2
+set acc_calibration = -103,-2,82,1
 set serialrx_provider = CRSF
 set dshot_idle_value = 450
 set motor_pwm_protocol = DSHOT600
@@ -102,14 +103,6 @@ set name = X220S
 profile 0
 
 rateprofile 0
-
-# rateprofile 0
-set roll_expo = 17
-set pitch_expo = 17
-set yaw_expo = 17
-set roll_srate = 85
-set pitch_srate = 85
-set yaw_srate = 82
 
 # end the command batch
 batch end

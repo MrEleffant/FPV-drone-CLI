@@ -362,10 +362,10 @@ mode_color 7 0 3
 
 # aux
 aux 0 0 0 1800 2100 0 0
-aux 1 1 2 900 1200 0 0
+aux 1 1 2 1800 2100 0 0
 aux 2 2 2 1300 1700 0 0
-aux 3 13 3 1700 2100 0 0
-aux 4 36 1 1700 2100 0 0
+aux 3 13 1 1700 2100 0 0
+aux 4 36 3 1700 2100 0 0
 aux 5 0 0 900 900 0 0
 aux 6 0 0 900 900 0 0
 aux 7 0 0 900 900 0 0
@@ -855,10 +855,10 @@ set cpu_overclock = OFF
 set pwr_on_arm_grace = 5
 set enable_stick_arming = OFF
 set vtx_band = 5
-set vtx_channel = 6
+set vtx_channel = 2
 set vtx_power = 5
 set vtx_low_power_disarm = ON
-set vtx_freq = 5843
+set vtx_freq = 5695
 set vtx_pit_mode_freq = 0
 set vtx_halfduplex = ON
 set vcd_video_system = NTSC
@@ -880,9 +880,9 @@ set displayport_max7456_wht = 2
 set esc_sensor_halfduplex = OFF
 set esc_sensor_current_offset = 0
 set frsky_spi_autobind = OFF
-set frsky_spi_tx_id = 148,103,9
-set frsky_spi_offset = -14
-set frsky_spi_bind_hop_data = 3,106,211,81,186,56,161,31,136,6,111,219,86,191,61,166,36,141,11,116,221,91,196,66,171,41,146,16,121,226,96,201,71,176,46,151,21,126,231,101,206,76,181,51,156,26,131,0,0,0
+set frsky_spi_tx_id = 117,123,1
+set frsky_spi_offset = -20
+set frsky_spi_bind_hop_data = 0,30,60,91,120,150,180,210,5,35,65,95,125,155,185,215,10,40,70,100,130,160,190,221,15,45,75,105,135,165,195,225,20,50,80,110,140,170,200,230,25,55,85,115,145,175,205,0,0,0
 set frsky_x_rx_num = 0
 set frsky_spi_a1_source = VBAT
 set cc2500_spi_chip_detect = ON
@@ -935,9 +935,9 @@ set box_user_2_name = -
 set box_user_3_name = -
 set box_user_4_name = -
 
-profile 0
+profile 2
 
-# profile 0
+# profile 2
 set profile_name = -
 set dterm_lpf1_dyn_min_hz = 75
 set dterm_lpf1_dyn_max_hz = 150
@@ -965,7 +965,7 @@ set crash_recovery_rate = 100
 set crash_limit_yaw = 200
 set crash_recovery = OFF
 set iterm_rotation = OFF
-set iterm_relax = RPY
+set iterm_relax = RP
 set iterm_relax_type = SETPOINT
 set iterm_relax_cutoff = 15
 set iterm_windup = 85
@@ -979,18 +979,18 @@ set acro_trainer_angle_limit = 20
 set acro_trainer_lookahead_ms = 50
 set acro_trainer_debug_axis = ROLL
 set acro_trainer_gain = 75
-set p_pitch = 64
-set i_pitch = 90
-set d_pitch = 64
-set f_pitch = 95
-set p_roll = 53
-set i_roll = 85
-set d_roll = 53
-set f_roll = 90
-set p_yaw = 51
-set i_yaw = 90
-set d_yaw = 55
-set f_yaw = 90
+set p_pitch = 47
+set i_pitch = 84
+set d_pitch = 46
+set f_pitch = 125
+set p_roll = 45
+set i_roll = 80
+set d_roll = 40
+set f_roll = 120
+set p_yaw = 45
+set i_yaw = 80
+set d_yaw = 0
+set f_yaw = 120
 set angle_level_strength = 50
 set horizon_level_strength = 50
 set horizon_transition = 75
@@ -1017,7 +1017,7 @@ set launch_angle_limit = 0
 set launch_control_gain = 40
 set thrust_linear = 0
 set transient_throttle_limit = 0
-set feedforward_transition = 21
+set feedforward_transition = 0
 set feedforward_averaging = OFF
 set feedforward_smooth_factor = 25
 set feedforward_jitter_factor = 7
